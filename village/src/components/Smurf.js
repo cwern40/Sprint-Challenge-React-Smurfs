@@ -1,10 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Smurf extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
   deleteSmurf = () => {
     const id = this.props.id
@@ -22,6 +20,7 @@ class Smurf extends React.Component {
     return (
       <div className="Smurf">
         <div className="icons">
+        <Link to={`/edit/${this.props.id}`}><i className="fas fa-edit"></i></Link>
         <i className="fas fa-trash-alt" onClick={this.deleteSmurf} ></i>
         </div>
         <h3>{this.props.name}</h3>
