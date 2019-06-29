@@ -38,8 +38,8 @@ class App extends Component {
           <NavLink className="main-nav" to="/" exact>Home</NavLink>
           <NavLink className="main-nav" to="/smurfs-form" exact>Create New</NavLink>
         </nav>
-        <Route path="/smurfs-form" exact render={() => <SmurfForm updateSmurfs={this.updateSmurfs} />} />
-        <Route path="/" exact render={() => <Smurfs smurfs={this.state.smurfs} />} />
+        <Route path="/smurfs-form" exact render={(props) => <SmurfForm {...props} updateSmurfs={this.updateSmurfs} />} />
+        <Route path="/" exact render={(props) => <Smurfs {...props} smurfs={this.state.smurfs} updateSmurfs={this.updateSmurfs} />} />
       </div>
     );
   }
