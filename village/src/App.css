@@ -1,3 +1,19 @@
 .App {
   text-align: center;
 }
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.main-nav {
+  text-decoration: none;
+  color: black;
+}
+
+.main-nav:hover {
+  text-decoration: underline;
+}
